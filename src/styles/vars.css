@@ -3,7 +3,3 @@
   --primaryColor: #191a1b;
   --textColorSecondary: rgba(0, 0, 0, 0.45);
 }
-
-/* @tailwind base; */
-@tailwind components;
-@tailwind utilities;
