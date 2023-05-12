@@ -1,6 +1,7 @@
 import { PropsWithChildren } from 'react'
 import { Inter } from 'next/font/google'
 
+import 'antd/dist/reset.css'
 import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
