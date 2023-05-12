@@ -12,6 +12,10 @@ import type { DatePickerProps } from 'antd'
 import { SmileFilled } from '@ant-design/icons'
 import Link from 'next/link'
 
+import { useCallback } from "react";
+import { IDKitWidget } from "@worldcoin/idkit";
+import type { ISuccessResult } from "@worldcoin/idkit";
+
 const FormItem = Form.Item
 
 const content = {
@@ -25,6 +29,19 @@ export default function Home() {
   ) => {
     console.log(date, dateString)
   }
+
+  const handleProof = useCallback((result: ISuccessResult) => {
+		return new Promise<void>((resolve) => {
+			setTimeout(() => resolve(), 3000);
+			// NOTE: Example of how to decline the verification request and show an error message to the user
+		});
+	}, []);
+
+	const onSuccess = (result: ISuccessResult) => {
+		console.log(result);
+	};
+
+
 
   return (
     <div style={content}>
@@ -90,7 +107,20 @@ export default function Home() {
             <DatePicker showTime onChange={onDatePickerChange} />
           </FormItem>
           <FormItem style={{ marginTop: 48 }} wrapperCol={{ offset: 8 }}>
-            <Button type="primary" htmlType="submit">
+            <IDKitWidget
+			      	action="my_action"
+			      	signal="my_signal"
+			      	onSuccess={onSuccess}
+			      	handleVerify={handleProof}
+			      	app_id="get_this_from_the_dev_portal"
+			      	// walletConnectProjectId="get_this_from_walletconnect_portal"
+			      >
+			      	{({ open }) =>  
+                <Button type="dashed" onClick={open}>
+                  Authenticate with WorldID
+                </Button>}
+			      </IDKitWidget>
+            <Button type="primary" htmlType="submit" style={{ marginLeft: 8 }}>
               OK
             </Button>
             <Button style={{ marginLeft: 8 }}>Cancel</Button>
