@@ -18,7 +18,8 @@ const data = [
         user: 'start with only',
         button: "Choose a ",
         profiles: 'Help choose what to build next',
-        posts: 'A common pull of revenue',
+        posts: 'A common pool of revenue',
+
         category: 'monthly'
     }
 ]
