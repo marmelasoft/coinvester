@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ActionButton from "../ActionButton/ActionButton";
 
 const Banner = () => {

@@ -1,7 +1,6 @@
 export { default as Aboutus } from './Aboutus'
 export { default as Banner } from './Banner'
 export { default as Dedicated } from './Dedicated'
-export { default as Digital } from './Digital'
 export { default as FAQ } from './FAQ'
 export { default as Featured } from './Featured'
 export { default as Footer } from './Footer'

@@ -115,7 +115,7 @@ export default class MultipleItems extends Component {
                         <div key={i}>
                             <div className='bg-white m-3 py-14 my-10 text-center shadow-xl rounded-3xl h'>
                                 <div className='relative h-48'>
-                                    <Image src={items.imgSrc} alt="gaby" fill className="inline-block m-auto rounded-lg object-cover px-4" />
+                                    <Image src={items.imgSrc} alt="gaby" width={320} height={400} className="inline-block m-auto rounded-xl" />
                                 </div>
                                 <h4 className='text-4xl font-bold pt-14'>{items.name}</h4>
                                 <h3 className='text-2xl font-normal pt-4 pb-2 opacity-50'>{items.profession}</h3>

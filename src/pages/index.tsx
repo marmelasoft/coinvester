@@ -16,7 +16,6 @@ const Home = () => {
         <Banner />
         <Aboutus />
         <Dedicated />
-        <Digital />
         <Wework />
         <Manage />
         <FAQ />
