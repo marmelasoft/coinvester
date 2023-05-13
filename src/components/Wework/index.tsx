@@ -98,10 +98,11 @@ export default class MultipleItems extends Component {
                 <div className='mx-auto max-w-2xl lg:max-w-7xl sm:py-4 lg:px-8 '>
 
                     <div className="text-center">
-                        <h3 className="text-4xl sm:text-6xl font-bold text-black my-2">Different type of investments.</h3>
-                        <h3 className="text-4xl sm:text-6xl font-bold text-black opacity-50 lg:mr-48 my-2">Different type of investments.</h3>
-                        <h3 className="text-4xl sm:text-6xl font-bold text-black opacity-25 lg:-mr-48 my-2">Different type of investments.</h3>
+                        <h3 className="text-4xl sm:text-6xl font-bold text-black my-2">Different types of investments.</h3>
+                        <h3 className="text-4xl sm:text-6xl font-bold text-black opacity-50 lg:mr-48 my-2">Different types of investments.</h3>
+                        <h3 className="text-4xl sm:text-6xl font-bold text-black opacity-25 lg:-mr-48 my-2">Different types of investments.</h3>
                     </div>
+
 
                 </div>
 
