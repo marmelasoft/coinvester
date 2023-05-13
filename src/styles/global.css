@@ -27,6 +27,40 @@ body {
     radial-gradient(at 35% 32%, hsla(173, 92%, 75%, 1) 0px, transparent 50%),
     radial-gradient(at 80% 50%, hsla(104, 86%, 78%, 1) 0px, transparent 50%);
 }
+.btn {
+  cursor: pointer;
+  padding-top: 0.75rem /* 12px */;
+  padding-bottom: 0.75rem /* 12px */;
+  padding-left: 1.5rem /* 24px */;
+  padding-right: 1.5rem /* 24px */;
+  border: none;
+  border-radius: 100vmax;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  background-color: #212529;
+  transition: scale 0.4s ease;
+}
+
+.btn:hover {
+  scale: 1.05;
+}
+
+.btn-fill {
+  background: linear-gradient(to right, #7fcce6, #92d945);
+  width: 150%;
+  height: 200%;
+  border-radius: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.btn-content {
+  position: relative;
+  z-index: 2;
+}
 
 html:not([data-scroll="0"]) .navbar {
   position: fixed;
