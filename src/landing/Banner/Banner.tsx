@@ -1,5 +1,5 @@
-import { Button } from "@/components/Button";
 import Image from "next/image";
+import ActionButton from "../ActionButton/ActionButton";
 
 const Banner = () => {
   return (
@@ -15,7 +15,7 @@ const Banner = () => {
             </h1>
           </div>
           <div className="text-sm font-semibold text-center md:text-xl my-7 lg:text-start">
-            <Button>Start Investing</Button>
+            <ActionButton>Start Investing</ActionButton>
           </div>
         </div>
 
