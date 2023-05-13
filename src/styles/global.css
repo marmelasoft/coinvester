@@ -13,6 +13,21 @@ body {
   font-family: "Urbanist", sans-serif;
 }
 
+.element {
+  background-color: #99c7ff;
+  background: radial-gradient(
+      at 93% 71%,
+      hsla(204, 99%, 71%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 57% 71%, hsla(132, 70%, 76%, 1) 0px, transparent 50%),
+    radial-gradient(at 79% 92%, hsla(270, 83%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 52% 74%, hsla(195, 78%, 70%, 1) 0px, transparent 50%),
+    radial-gradient(at 23% 80%, hsla(31, 74%, 79%, 1) 0px, transparent 50%),
+    radial-gradient(at 35% 32%, hsla(173, 92%, 75%, 1) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, hsla(104, 86%, 78%, 1) 0px, transparent 50%);
+}
+
 html:not([data-scroll="0"]) .navbar {
   position: fixed;
   top: 0;

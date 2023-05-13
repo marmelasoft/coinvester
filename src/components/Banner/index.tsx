@@ -8,12 +8,11 @@ const Banner = () => {
                 {/* COLUMN-1 */}
 
                 <div className="mx-auto sm:mx-0">
-                    <div className='py-3 text-center lg:text-start'>
-                        <button className='text-blue bg-lightblue hover:shadow-xl text-sm md:text-lg font-bold px-6 py-1 rounded-3xl tracking-wider hover:text-white hover:bg-black'>DESIGN AGENCY</button>
+                    <div className='py-8 text-center lg:text-start'>
                     </div>
                     <div className="py-3 text-center lg:text-start">
                         <h1 className='text-6xl lg:text-80xl font-bold text-darkpurple'>
-                            Dedicated to <br /> bring your <br /> ideas to life.
+                            Democratizing access to investment.
                         </h1>
                     </div>
                     <div className='my-7 text-center lg:text-start'>
@@ -25,7 +24,7 @@ const Banner = () => {
 
                 {/* COLUMN-2 */}
 
-                <div className='lg:-m-24 lg:pt-20 hidden lg:block'>
+                <div className='hidden lg:block'>
                     <Image src="/images/banner/banner.svg" alt="hero-image" width={800} height={642} />
                 </div>
 

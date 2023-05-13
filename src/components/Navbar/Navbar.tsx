@@ -16,8 +16,6 @@ const navigation: NavigationItem[] = [
     { name: 'About Us', href: '#aboutus-section', current: false },
     { name: 'Services', href: '#services-section', current: false },
     { name: 'FAQ', href: '#faq-section', current: false },
-    { name: 'Blog', href: '#blog-section', current: false },
-    { name: 'Testimonial', href: '#testimonial-section', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -37,12 +35,12 @@ const Navbar = () => {
 
                             {/* LOGO */}
 
-                            <div className="flex flex-shrink-0 items-center border-right">
-                                <Link href="/" className='text-2xl sm:text-4xl font-semibold text-black'>
-                                    Desgy Solutions
+                            <div className="flex items-center flex-shrink-0 border-right">
+                                <Link href="/" className="flex items-center gap-2 text-2xl font-semibold text-black sm:text-4xl">
+                                    <div className="w-10 h-10 rounded-full element" />
+                                    coinvest
                                 </Link>
                             </div>
-
                             {/* LINKS */}
 
                             <div className="hidden lg:flex items-center border-right ">
