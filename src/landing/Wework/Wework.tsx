@@ -14,39 +14,45 @@ const postData: DataType[] = [
     {
         profession: 'Braga',
         name: '2 Bedroom House ',
-        imgSrc: '/images/wework/avatar.svg',
+        imgSrc: '/images/wework/house1.jpeg',
     },
     {
         profession: 'Porto',
-        name: '3 Bedroom Apt.',
-        imgSrc: '/images/wework/avatar3.svg',
+        name: '3 Bedroom Apartment',
+        imgSrc: '/images/wework/house2.jpeg',
     },
     {
         profession: 'Braga',
         name: '4 Bedroom House',
-        imgSrc: '/images/wework/avatar4.svg',
+        imgSrc: '/images/wework/house3.jpeg',
     },
     {
         profession: 'Guimarães',
         name: '1 Bedroom Apartment',
-        imgSrc: '/images/wework/avatar.svg',
+        imgSrc: '/images/wework/house6.jpeg',
     },
     {
         profession: 'Famalicão',
-        name: '2 Bedroom Apartment',
-        imgSrc: '/images/wework/avatar3.svg',
+        name: '2 Bedroom House',
+        imgSrc: '/images/wework/house4.jpeg',
     },
     {
         profession: 'Braga',
         name: '6 Bedroom Apartment',
-        imgSrc: '/images/wework/avatar4.svg',
+        imgSrc: '/images/wework/house7.jpeg',
     },
+    {
+        profession: 'Braga',
+        name: '2 Bedroom House',
+        imgSrc: '/images/wework/house5.jpeg',
+    }
 ]
 
 // CAROUSEL SETTINGS
 
 
 export default class MultipleItems extends Component {
+
     render() {
         const settings = {
             dots: false,
@@ -102,15 +108,14 @@ export default class MultipleItems extends Component {
                         <h3 className="text-4xl sm:text-6xl font-bold text-black opacity-25 lg:-mr-48 my-2">Different types of investments.</h3>
                     </div>
 
-
                 </div>
 
                 <Slider {...settings}>
                     {postData.map((items, i) => (
                         <div key={i}>
-                            <div className='bg-white m-3 py-14 my-10 text-center shadow-xl rounded-3xl'>
-                                <div className='relative'>
-                                    <Image src={items.imgSrc} alt="gaby" width={182} height={182} className="inline-block m-auto" />
+                            <div className='bg-white m-3 py-14 my-10 text-center shadow-xl rounded-3xl h'>
+                                <div className='relative h-48'>
+                                    <Image src={items.imgSrc} alt="gaby" fill className="inline-block m-auto rounded-lg object-cover px-4" />
                                 </div>
                                 <h4 className='text-4xl font-bold pt-14'>{items.name}</h4>
                                 <h3 className='text-2xl font-normal pt-4 pb-2 opacity-50'>{items.profession}</h3>
@@ -118,7 +123,9 @@ export default class MultipleItems extends Component {
                         </div>
                     ))}
                 </Slider>
+
             </div>
+
         );
     }
 }
