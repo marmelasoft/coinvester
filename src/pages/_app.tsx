@@ -1,17 +1,20 @@
 import type { AppProps } from 'next/app'
-import { ThirdwebProvider } from '@thirdweb-dev/react';
+import { ThirdwebProvider } from "@thirdweb-dev/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import 'antd/dist/reset.css'
 
 import '@/styles/vars.css'
 import '@/styles/global.css'
 
-const activeChain = 'goerli';
+const queryClient = new QueryClient();
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ThirdwebProvider activeChain={activeChain}>
-      <Component {...pageProps} />
-    </ThirdwebProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThirdwebProvider activeChain="ethereum" queryClient={queryClient}>
+        <Component {...pageProps} />
+      </ThirdwebProvider>
+    </QueryClientProvider>
   )
 }
