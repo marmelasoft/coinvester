@@ -1,3 +1,4 @@
+import { useCallback } from "react";
 import {
   Button,
   DatePicker,
@@ -11,7 +12,7 @@ import type { DatePickerProps } from 'antd'
 import { SmileFilled } from '@ant-design/icons'
 import Link from 'next/link'
 
-import { useCallback } from "react";
+import { ConnectWallet } from '@thirdweb-dev/react';
 import { IDKitWidget } from "@worldcoin/idkit";
 import type { ISuccessResult } from "@worldcoin/idkit";
 
@@ -123,6 +124,14 @@ export default function Home() {
               OK
             </Button>
             <Button style={{ marginLeft: 8 }}>Cancel</Button>
+
+			<ConnectWallet
+				theme='dark'
+				dropdownPosition={{
+					align: 'center',
+					side: 'bottom',
+				}}
+			/>
           </FormItem>
         </Form>
       </div>
