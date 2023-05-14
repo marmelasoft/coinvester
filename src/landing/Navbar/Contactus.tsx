@@ -1,9 +1,25 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useState, useCallback } from 'react';
 import Link from 'next/link';
 import { Dialog, Transition } from '@headlessui/react';
 import { ConnectWallet } from "@thirdweb-dev/react";
+import type { ISuccessResult } from "@worldcoin/idkit";
+import { IDKitWidget } from "@worldcoin/idkit";
+import Router from 'next/router'
+import ActionButton from '../ActionButton/ActionButton';
 
 const Contactusform = () => {
+  	const handleProof = useCallback((result: ISuccessResult) => {
+		return new Promise<void>((resolve) => {
+			setTimeout(() => resolve(), 3000);
+			// NOTE: Example of how to decline the verification request and show an error message to the user
+		});
+	}, []);
+
+	const onSuccess = (result: ISuccessResult) => {
+		console.log(result);
+        Router.push("/app/ecommerce/shop")
+	};
+
     const [isOpen, setIsOpen] = useState(false)
 
     const [inputValues, setInputValues] = useState({
@@ -43,6 +59,16 @@ const Contactusform = () => {
         <>
             <div className=" inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto md:ml-6 sm:pr-0">
                 <ConnectWallet btnTitle="Connect Wallet" />
+				<IDKitWidget
+					action="my_action"
+					signal="my_signal"
+					onSuccess={onSuccess}
+					handleVerify={handleProof}
+					app_id="get_this_from_the_dev_portal"
+					// walletConnectProjectId="get_this_from_walletconnect_portal"
+				>
+					{({ open }) => <div onClick={open}><ActionButton>Verify</ActionButton></div>}
+				</IDKitWidget>
             </div>
 
             <Transition appear show={isOpen} as={Fragment}>

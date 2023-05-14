@@ -16,9 +16,7 @@ const Banner = () => {
           </div>
           <div className="text-sm font-semibold text-center md:text-xl my-7 lg:text-start">
             <Link href="/app/ecommerce/shop">
-              <ActionButton>
-                Start Investing
-              </ActionButton>
+              <ActionButton>Start Investing</ActionButton>
             </Link>
           </div>
         </div>
