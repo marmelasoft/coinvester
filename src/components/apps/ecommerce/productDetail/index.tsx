@@ -25,6 +25,7 @@ import {
 import { IconCheck, IconMinus, IconPlus } from "@tabler/icons-react";
 import AlertCart from "../productCart/AlertCart";
 import { ProductType } from "../../../../types/apps/eCommerce";
+import ActionButton from "@/landing/ActionButton/ActionButton";
 
 const ProductDetail = () => {
   const theme = useTheme();
@@ -77,7 +78,7 @@ const ProductDetail = () => {
             <Chip label="In Stock" color="success" size="small" />
             <Typography
               color="textSecondary"
-              variant="caption"
+              variant="h5"
               ml={1}
               textTransform="capitalize"
             >
@@ -85,13 +86,16 @@ const ProductDetail = () => {
             </Typography>
           </Box>
           {/* ------------------------------------------- */}
-          {/* Title and description */}
+          {/* Title, location and description */}
           {/* ------------------------------------------- */}
-          <Typography fontWeight="600" variant="h4" mt={1}>
+          <Typography fontWeight="600" variant="h3" mt={1}>
             {product?.title}
           </Typography>
+          <Typography fontWeight="600" variant="subtitle1" mt={1}>
+            {product?.location}
+          </Typography>
           <Typography
-            variant="subtitle2"
+            variant="subtitle1"
             mt={1}
             color={theme.palette.text.secondary}
           >
@@ -101,7 +105,7 @@ const ProductDetail = () => {
           {/* ------------------------------------------- */}
           {/* Price */}
           {/* ------------------------------------------- */}
-          <Typography mt={2} variant="h4" fontWeight={600}>
+          <Typography mt={2} variant="h3" fontWeight={600}>
             <Box
               component={"small"}
               color={theme.palette.text.secondary}
@@ -127,39 +131,10 @@ const ProductDetail = () => {
           </Stack>
           <Divider />
           {/* ------------------------------------------- */}
-          {/* Colors */}
-          {/* ------------------------------------------- */}
-          <Stack py={4} direction="row" alignItems="center">
-            <Typography variant="h6" mr={1}>
-              Colors:
-            </Typography>
-            <Box>
-              {product.colors.map((color: any) => (
-                <Fab
-                  color="primary"
-                  sx={{
-                    transition: "0.1s ease-in",
-                    scale: scolor === color ? "0.9" : "0.7",
-                    backgroundColor: `${color}`,
-                    "&:hover": {
-                      backgroundColor: `${color}`,
-                      opacity: 0.7,
-                    },
-                  }}
-                  size="small"
-                  key={color}
-                  onClick={() => setColor(color)}
-                >
-                  {scolor === color ? <IconCheck size="1.1rem" /> : ""}
-                </Fab>
-              ))}
-            </Box>
-          </Stack>
-          {/* ------------------------------------------- */}
           {/* Qty */}
           {/* ------------------------------------------- */}
           <Stack direction="row" alignItems="center" pb={5}>
-            <Typography variant="h6" mr={4}>
+            <Typography variant="h5" mr={4}>
               QTY:
             </Typography>
             <Box>
@@ -199,24 +174,7 @@ const ProductDetail = () => {
                 Buy Now
               </Button>
             </Grid>
-            <Grid item xs={12} lg={4} md={6}>
-              <Button
-                color="error"
-                size="large"
-                fullWidth
-                variant="contained"
-                onClick={() => dispatch(addToCart(product)) && handleClick()}
-              >
-                Add to Cart
-              </Button>
-            </Grid>
           </Grid>
-          <Typography color="textSecondary" variant="body1" mt={4}>
-            Dispatched in 2-3 weeks
-          </Typography>
-          <Link href="/" color="inherit">
-            Why the longer time for delivery?
-          </Link>
           {/* ------------------------------------------- */}
           {/* Alert When click on add to cart */}
           {/* ------------------------------------------- */}

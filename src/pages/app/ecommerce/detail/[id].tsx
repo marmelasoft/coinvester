@@ -1,23 +1,23 @@
-import { Grid } from '@mui/material';
-import ProductCarousel from '@/components/apps/ecommerce/productDetail/ProductCarousel';
-import Breadcrumb from '@/layouts/full/shared/breadcrumb/Breadcrumb';
-import PageContainer from '@/components/container/PageContainer';
-import ProductDetail from '@/components/apps/ecommerce/productDetail';
-import ProductDesc from '@/components/apps/ecommerce/productDetail/ProductDesc';
-import ProductRelated from '@/components/apps/ecommerce/productDetail/ProductRelated';
-import ChildCard from '@/components/shared/ChildCard';
+import { Grid } from "@mui/material";
+import ProductCarousel from "@/components/apps/ecommerce/productDetail/ProductCarousel";
+import Breadcrumb from "@/layouts/full/shared/breadcrumb/Breadcrumb";
+import PageContainer from "@/components/container/PageContainer";
+import ProductDetail from "@/components/apps/ecommerce/productDetail";
+import ProductDesc from "@/components/apps/ecommerce/productDetail/ProductDesc";
+import ProductRelated from "@/components/apps/ecommerce/productDetail/ProductRelated";
+import ChildCard from "@/components/shared/ChildCard";
 
 const BCrumb = [
   {
-    to: '/',
-    title: 'Home',
+    to: "/",
+    title: "Home",
   },
   {
-    title: 'Shop',
-    to: '/app/ecommerce/shop',
+    title: "Shop",
+    to: "/app/ecommerce/shop",
   },
   {
-    title: 'detail',
+    title: "detail",
   },
 ];
 
@@ -26,7 +26,11 @@ const EcommerceDetail = () => {
     <PageContainer>
       {/* breadcrumb */}
       <Breadcrumb title="Product Detail" items={BCrumb} />
-      <Grid container spacing={3} sx={{ maxWidth: { lg: '1055px', xl: '1200px' } }}>
+      <Grid
+        container
+        spacing={3}
+        sx={{ paddingX: "32px", paddingBottom: "32px" }}
+      >
         <Grid item xs={12} sm={12} lg={12}>
           <ChildCard>
             {/* ------------------------------------------- */}
@@ -53,6 +57,6 @@ const EcommerceDetail = () => {
   );
 };
 
-EcommerceDetail.layout = "Blank"
+EcommerceDetail.layout = "Blank";
 
 export default EcommerceDetail;

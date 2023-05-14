@@ -46,7 +46,7 @@ const ProductRelated = () => {
 
   return (
     <Box>
-      <Typography variant="h4" mb={2} mt={5}>
+      <Typography variant="h2" mb={2} mt={5}>
         Related Products
       </Typography>
       <Grid container spacing={3}>
@@ -80,7 +80,9 @@ const ProductRelated = () => {
                 )}
               </Typography>
               <CardContent sx={{ p: 3, pt: 2 }}>
-                <Typography fontWeight={600}>{product.title}</Typography>
+                <Typography variant="h4" fontWeight={600}>
+                  {product.title}
+                </Typography>
                 <Stack
                   direction="row"
                   alignItems="center"
@@ -88,7 +90,7 @@ const ProductRelated = () => {
                   mt={1}
                 >
                   <Stack direction="row" alignItems="center">
-                    <Typography variant="h5">${product.price}</Typography>
+                    <Typography variant="h4">${product.price}</Typography>
                     <Typography
                       color={"GrayText"}
                       ml={1}
