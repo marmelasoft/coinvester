@@ -14,7 +14,7 @@ const BCrumb = [
   },
   {
     title: 'Shop',
-    to: '/apps/ecommerce/shop',
+    to: '/app/ecommerce/shop',
   },
   {
     title: 'detail',
