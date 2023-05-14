@@ -1,6 +1,6 @@
 import { PropsWithChildren, useRef } from "react";
 
-const ActionButton = ({ children }: PropsWithChildren<{}>) => {
+const ActionButton = ({ children}: PropsWithChildren<{}>) => {
   const btnFillRef = useRef<HTMLDivElement>(null);
 
   const animateBtnFill = (translateY: number, duration: number) => {

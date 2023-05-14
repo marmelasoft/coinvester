@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import ActionButton from "../ActionButton/ActionButton";
 
 const Banner = () => {
@@ -14,7 +15,11 @@ const Banner = () => {
             </h1>
           </div>
           <div className="text-sm font-semibold text-center md:text-xl my-7 lg:text-start">
-            <ActionButton>Start Investing</ActionButton>
+            <Link href="/app/ecommerce/shop">
+              <ActionButton>
+                Start Investing
+              </ActionButton>
+            </Link>
           </div>
         </div>
 
