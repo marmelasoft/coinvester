@@ -41,4 +41,6 @@ const Ecommerce = () => {
   );
 };
 
+Ecommerce.layout = "Blank"
+
 export default Ecommerce;
