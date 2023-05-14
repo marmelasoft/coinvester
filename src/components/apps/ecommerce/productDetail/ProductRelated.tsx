@@ -66,7 +66,7 @@ const ProductRelated = () => {
             <BlankCard sx={{ p: 0 }} className="hoverCard">
               <Typography
                 component={Link}
-                href={`/apps/ecommerce/detail/${product.id}`}
+                href={`/app/ecommerce/detail/${product.id}`}
               >
                 {isLoading ? (
                   <Skeleton
