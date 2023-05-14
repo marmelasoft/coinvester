@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Navbar, Banner, Aboutus, Digital, Dedicated, Manage, FAQ, Footer, Wework } from "@landing";
+import { Navbar, Banner, Aboutus, Dedicated, Manage, FAQ, Footer, Wework } from "@landing";
 
 const Home = () => {
   return (
