@@ -25,4 +25,6 @@ const Home = () => {
   );
 };
 
+Home.layout = "Blank"
+
 export default Home;

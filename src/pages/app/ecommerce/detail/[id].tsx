@@ -1,11 +1,11 @@
 import { Grid } from '@mui/material';
-import ProductCarousel from '../../../../src/components/apps/ecommerce/productDetail/ProductCarousel';
-import Breadcrumb from '../../../../src/layouts/full/shared/breadcrumb/Breadcrumb';
-import PageContainer from '../../../../src/components/container/PageContainer';
-import ProductDetail from '../../../../src/components/apps/ecommerce/productDetail';
-import ProductDesc from '../../../../src/components/apps/ecommerce/productDetail/ProductDesc';
-import ProductRelated from '../../../../src/components/apps/ecommerce/productDetail/ProductRelated';
-import ChildCard from '../../../../src/components/shared/ChildCard';
+import ProductCarousel from '@/components/apps/ecommerce/productDetail/ProductCarousel';
+import Breadcrumb from '@/layouts/full/shared/breadcrumb/Breadcrumb';
+import PageContainer from '@/components/container/PageContainer';
+import ProductDetail from '@/components/apps/ecommerce/productDetail';
+import ProductDesc from '@/components/apps/ecommerce/productDetail/ProductDesc';
+import ProductRelated from '@/components/apps/ecommerce/productDetail/ProductRelated';
+import ChildCard from '@/components/shared/ChildCard';
 
 const BCrumb = [
   {
@@ -52,5 +52,7 @@ const EcommerceDetail = () => {
     </PageContainer>
   );
 };
+
+EcommerceDetail.layout = "Blank"
 
 export default EcommerceDetail;
