@@ -29,7 +29,7 @@ const Banner = () => {
                 x2="50%"
                 y2="100%"
               >
-                <stop offset="0%" stop-color="#B373F2">
+                <stop offset="0%" stopColor="#B373F2">
                   <animate
                     attributeName="stop-color"
                     values="#B373F2; #F1CBA2; #B373F2"
@@ -39,7 +39,7 @@ const Banner = () => {
                   </animate>
                 </stop>
 
-                <stop offset="100%" stop-color="#F1CBA2">
+                <stop offset="100%" stopColor="#F1CBA2">
 
                   <animate
                     attributeName="stop-color"
