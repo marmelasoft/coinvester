@@ -220,13 +220,19 @@ const ProductList = ({ onClick }: Props) => {
                         mt={1}
                       >
                         <Stack direction="row" alignItems="center">
-                          <Typography variant="h6">${product.price}</Typography>
+                          <Image
+                            src="/images/eth.svg"
+                            alt="eth"
+                            width={20}
+                            height={20}
+                          />
+                          <Typography variant="h6">{product.price}</Typography>
                           <Typography
                             color="textSecondary"
                             ml={1}
                             sx={{ textDecoration: "line-through" }}
                           >
-                            ${product.salesPrice}
+                            {product.salesPrice}
                           </Typography>
                         </Stack>
                         <Rating

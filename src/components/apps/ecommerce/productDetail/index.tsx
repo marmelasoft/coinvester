@@ -13,7 +13,6 @@ import {
   Divider,
   Stack,
   useTheme,
-  Fab,
   ButtonGroup,
 } from "@mui/material";
 
@@ -22,17 +21,16 @@ import {
   fetchProducts,
   addToCart,
 } from "../../../../store/apps/eCommerce/ECommerceSlice";
-import { IconCheck, IconMinus, IconPlus } from "@tabler/icons-react";
+import { IconMinus, IconPlus } from "@tabler/icons-react";
 import AlertCart from "../productCart/AlertCart";
 import { ProductType } from "../../../../types/apps/eCommerce";
-import ActionButton from "@/landing/ActionButton/ActionButton";
+import Image from "next/image";
 
 const ProductDetail = () => {
   const theme = useTheme();
   const dispatch = useDispatch();
   const router = useRouter();
   const getTitle: string | any = router.query.id;
-  console.log(getTitle);
   // Get Product
   useEffect(() => {
     dispatch(fetchProducts());
@@ -44,12 +42,6 @@ const ProductDetail = () => {
   const product: ProductType | any = useSelector(
     (state: AppState) => state.ecommerceReducer.products[getTitle - 1]
   );
-
-  /// select colors on click
-  const [scolor, setScolor] = useState(product ? product.colors[0] : "");
-  const setColor = (e: string) => {
-    setScolor(e);
-  };
 
   //set qty
   const [count, setCount] = useState(1);
@@ -110,10 +102,11 @@ const ProductDetail = () => {
               component={"small"}
               color={theme.palette.text.secondary}
               sx={{ textDecoration: "line-through" }}
-            >
-              ${product.salesPrice}
-            </Box>{" "}
-            ${product.price}
+            ></Box>{" "}
+            <Stack direction="row" alignItems="center">
+              <Image src="/images/eth.svg" alt="eth" width={20} height={20} />
+              {product.price}
+            </Stack>
           </Typography>
           {/* ------------------------------------------- */}
           {/* Ratings */}
